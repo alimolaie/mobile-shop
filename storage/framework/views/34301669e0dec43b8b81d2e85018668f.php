@@ -1,0 +1,15 @@
+<div class="allAdsIndex2 width">
+    <div class="title">
+        <div class="title1"><?php echo e($data['title']); ?></div>
+    </div>
+    <div class="adsItems">
+        <?php $__currentLoopData = json_decode($data['ads1']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="adsItem">
+                <a href="<?php echo e($item->address); ?>">
+                    <img lazy="loading" src="<?php echo e($item->image); ?>" alt="<?php echo e($item->address); ?>">
+                </a>
+            </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
+</div>
+<?php /**PATH G:\Laravel\NewSeo\seoshop\resources\views/home/index/adIndex2.blade.php ENDPATH**/ ?>
